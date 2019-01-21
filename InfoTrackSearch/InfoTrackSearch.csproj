@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\infotrack3.jpg" />
+    <Content Remove="wwwroot\images\filter.png" />
+    <Content Remove="wwwroot\images\infotrack2.jpg" />
+    <Content Remove="wwwroot\images\infotrack1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Service\ISearchResult.cs" />
+    <Compile Remove="Service\IInfoTrackSearchService1.cs" />
+  </ItemGroup>
+</Project>

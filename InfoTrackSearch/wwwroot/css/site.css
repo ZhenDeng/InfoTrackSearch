@@ -1,0 +1,359 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* Fix IE bug: not support margin:auto */
+    .clearFilterButton, .searchInputGroup {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .searchInputGroup {
+        width: calc(100% - 30px)
+    }
+}
+
+/*search bar and title*/
+.searchIcon {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-right: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px;
+    color: #808080;
+    font-size: 0.625rem;
+}
+
+.searchInputGroup {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    font-size: 12px;
+    font-style: italic;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.searchInput {
+    width: 100%;
+    border-left: none;
+    margin: 0;
+    outline: none;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 20px;
+    padding-left: 40px;
+}
+
+.infosearch {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    white-space: nowrap;
+    margin-top: 20px;
+    /* IE7 Fix */
+    *zoom: 1;
+    *display: inline;
+}
+
+    button:hover {
+        color: #CA1845 !important;
+        background-color: #eee !important;
+    }
+
+.button-red {
+    background-color: #CA1845;
+    color: white;
+}
+
+.button-mid {
+    padding: 9px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    line-height: normal;
+    min-width: 60px;
+    /* IE7 Fix */
+    min-width: 0;
+}
+
+.searchbutton{
+    text-align:center;
+}
+
+.table{
+    margin-top: 20px;
+}
+
+.resultmsg {
+    font-size: 17px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
+
+/*#region Validator */
+.validator-container {
+    display: none;
+    position: absolute;
+    z-index: 9030;
+    background: transparent;
+}
+
+.validator-new {
+    font-size: 12px;
+    position: relative;
+    padding: 8px;
+    text-align: center;
+    max-width: 200px;
+}
+
+    .validator-new.validator-red {
+        color: white;
+        background: #CA1845;
+        border: 1px solid #A01B3C;
+    }
+
+    .validator-new.validator-green {
+        color: white;
+        background: #459A45;
+        border: 1px solid #2B5E2B;
+    }
+
+    .validator-new.validator-dark {
+        color: white;
+        background-color: #343535;
+        border: 1px solid #2B5E2B;
+    }
+
+    .validator-new.validator-light {
+        color: black;
+        background-color: #E7E6E3;
+        border: 1px solid #2B5E2B;
+    }
+
+    .validator-new:before, .validator-new:after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: solid transparent;
+        pointer-events: none;
+    }
+
+    .validator-new.validator-top:before, .validator-new.validator-top:after {
+        top: 100%;
+        left: 50%;
+    }
+
+    .validator-new.validator-right:before, .validator-new.validator-right:after {
+        right: 100%;
+        top: 50%;
+    }
+
+    .validator-new.validator-bottom:before, .validator-new.validator-bottom:after {
+        bottom: 100%;
+        left: 50%;
+    }
+
+    .validator-new.validator-left:before, .validator-new.validator-left:after {
+        left: 100%;
+        top: 50%;
+    }
+
+    .validator-new.validator-top:after, .validator-new.validator-right:after, .validator-new.validator-bottom:after, .validator-new.validator-left:after {
+        border-width: 7px;
+    }
+
+    .validator-new.validator-top:after, .validator-new.validator-bottom:after {
+        margin-left: -7px;
+    }
+
+    .validator-new.validator-right:after, .validator-new.validator-left:after {
+        margin-top: -7px;
+    }
+
+    .validator-new.validator-red:after {
+        border-color: rgba(202, 24, 69, 0);
+    }
+
+    .validator-new.validator-red.validator-top:after {
+        border-top-color: #CA1845;
+    }
+
+    .validator-new.validator-red.validator-right:after {
+        border-right-color: #CA1845;
+    }
+
+    .validator-new.validator-red.validator-bottom:after {
+        border-bottom-color: #CA1845;
+    }
+
+    .validator-new.validator-red.validator-left:after {
+        border-left-color: #CA1845;
+    }
+
+    .validator-new.validator-green:after {
+        border-color: rgba(69, 154, 69, 0);
+    }
+
+    .validator-new.validator-green.validator-top:after {
+        border-top-color: #459A45;
+    }
+
+    .validator-new.validator-green.validator-right:after {
+        border-right-color: #459A45;
+    }
+
+    .validator-new.validator-green.validator-bottom:after {
+        border-bottom-color: #459A45;
+    }
+
+    .validator-new.validator-green.validator-left:after {
+        border-left-color: #459A45;
+    }
+
+    .validator-new.validator-dark:after {
+        border-color: rgba(52, 53, 53, 0);
+    }
+
+    .validator-new.validator-dark.validator-top:after {
+        border-top-color: #343535;
+    }
+
+    .validator-new.validator-dark.validator-right:after {
+        border-right-color: #343535;
+    }
+
+    .validator-new.validator-dark.validator-bottom:after {
+        border-bottom-color: #343535;
+    }
+
+    .validator-new.validator-dark.validator-left:after {
+        border-left-color: #343535;
+    }
+
+    .validator-new.validator-light:after {
+        border-color: rgba(231, 230, 227, 0);
+    }
+
+    .validator-new.validator-light.validator-top:after {
+        border-top-color: #E7E6E3;
+    }
+
+    .validator-new.validator-light.validator-right:after {
+        border-right-color: #E7E6E3;
+    }
+
+    .validator-new.validator-light.validator-bottom:after {
+        border-bottom-color: #E7E6E3;
+    }
+
+    .validator-new.validator-light.validator-left:after {
+        border-left-color: #E7E6E3;
+    }
+
+    .validator-new.validator-top:before, .validator-new.validator-right:before, .validator-new.validator-bottom:before, .validator-new.validator-left:before {
+        border-width: 8px;
+    }
+
+    .validator-new.validator-top:before, .validator-new.validator-bottom:before {
+        margin-left: -8px;
+    }
+
+    .validator-new.validator-right:before, .validator-new.validator-left:before {
+        margin-top: -8px;
+    }
+
+    .validator-new.validator-red:before {
+        border-color: rgba(160, 27, 60, 0);
+    }
+
+    .validator-new.validator-red.validator-top:before {
+        border-top-color: #A01B3C;
+    }
+
+    .validator-new.validator-red.validator-right:before {
+        border-right-color: #A01B3C;
+    }
+
+    .validator-new.validator-red.validator-bottom:before {
+        border-bottom-color: #A01B3C;
+    }
+
+    .validator-new.validator-red.validator-left:before {
+        border-left-color: #A01B3C;
+    }
+
+    .validator-new.validator-green:before {
+        border-color: rgba(50, 109, 50, 0);
+    }
+
+    .validator-new.validator-green.validator-top:before {
+        border-top-color: #326D32;
+    }
+
+    .validator-new.validator-green.validator-right:before {
+        border-right-color: #326D32;
+    }
+
+    .validator-new.validator-green.validator-bottom:before {
+        border-bottom-color: #326D32;
+    }
+
+    .validator-new.validator-green.validator-left:before {
+        border-left-color: #326D32;
+    }
+/*#endregion*/
