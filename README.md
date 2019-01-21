@@ -1,4 +1,4 @@
-# FindBestCandidateForJob
+# InfoTrackSearch
 
 [![.netcore](https://img.shields.io/badge/.net%20core-2.1.3-blue.svg)](https://github.com/dotnet/core)
 [![.bootstrap](https://img.shields.io/badge/bootstrap-3.3.7-red.svg)](https://github.com/twbs)
